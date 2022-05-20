@@ -11,4 +11,7 @@ class ImagePairing:
         image1 = self.imagefiles.next()
         image2 = self.imagefiles.next()
 
+        if image1 is None or image2 is None:
+            return None
+
         return Juxtaposition(image1, image2)

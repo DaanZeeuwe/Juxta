@@ -12,5 +12,8 @@ class ImageFiles:
         random.shuffle(self.files)
 
     def next(self):
-        return self.files.pop()
+        if self.files:
+            return self.files.pop()
+        else:
+            return None
 

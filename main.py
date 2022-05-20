@@ -13,7 +13,10 @@ from juxtaposition import Juxtaposition
 
 if __name__ == '__main__':
     pairing: ImagePairing = ImagePairing()
-    juxtaposition: Juxtaposition = pairing.pair()
-    ImageViewer().view(juxtaposition)
+    while True:
+        juxtaposition: Juxtaposition = pairing.pair()
+        if juxtaposition is None:
+            break
+        ImageViewer().view(juxtaposition)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

@@ -15,4 +15,6 @@ class ImageViewer:
         axarr[0].axis('off')
         axarr[1].imshow(mpimg.imread(juxta.image2))
         axarr[1].axis('off')
-        plt.show()
+        plt.draw()
+        plt.waitforbuttonpress(0)  # this will wait for indefinite time
+        plt.close(f)
